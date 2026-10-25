@@ -12,6 +12,8 @@ AI 대화 상대와 상황별 역할극을 하고, 내 발음·운율을 연구�
 
 ---
 
+<p align="center"><a href="https://drive.google.com/file/d/1Y92tkqzd2Bvbn27Cs-WWmfHy80HUrEj1/view?usp=drive_link"><b>⬇ Android 시험 APK 받기 (v0.3.4)</b></a></p>
+
 ## 목차
 
 1. [주요 기능](#1-주요-기능)
@@ -88,8 +90,8 @@ AI 대화 상대와 상황별 역할극을 하고, 내 발음·운율을 연구�
 
 ### 4-1. 설치 (시험 APK)
 
-1. 시험용 APK(`SENA-v0.3.4-test.apk`, 약 0.36GB, arm64)를 휴대폰에 받습니다.
-   - 현재 Play Store 출시 전이라 APK는 연구자가 따로 배포합니다. 직접 만들려면 [8. 직접 빌드하기](#8-직접-빌드하기)를 보세요.
+1. 시험용 APK를 휴대폰에서 받습니다: **[⬇ SENA-v0.3.4-test.apk 받기 (Google Drive, 약 0.36GB, arm64)](https://drive.google.com/file/d/1Y92tkqzd2Bvbn27Cs-WWmfHy80HUrEj1/view?usp=drive_link)**
+   - 현재 Play Store 출시 전 시험판입니다. 직접 만들려면 [8. 직접 빌드하기](#8-직접-빌드하기)를 보세요.
 2. 파일을 열어 설치합니다. 처음이면 "출처를 알 수 없는 앱 설치 허용"을 켜야 합니다.
 3. 예전 버전이 있으면 그대로 덮어 설치해도 기록과 대화 모델이 유지됩니다.
 
