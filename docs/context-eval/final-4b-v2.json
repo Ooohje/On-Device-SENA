@@ -1,0 +1,440 @@
+{
+ "model": "gemma3:4b",
+ "judge": "qwen3:8b",
+ "nctx": 2048,
+ "seeds": [
+  7,
+  8
+ ],
+ "probeAcc": 1,
+ "probes": 32,
+ "judgeMean": 4.519230769230769,
+ "byWhy": {
+  "질문에 답하기": [
+   10,
+   10
+  ],
+  "앞 내용 활용": [
+   2,
+   2
+  ],
+  "사람 기억": [
+   2,
+   2
+  ],
+  "장소 기억": [
+   2,
+   2
+  ],
+  "숫자 기억": [
+   2,
+   2
+  ],
+  "직장 기억": [
+   2,
+   2
+  ],
+  "이미 말한 주문을 다시 묻지 않기": [
+   4,
+   4
+  ],
+  "이미 답한 것 다시 묻지 않기": [
+   2,
+   2
+  ],
+  "주문 기억": [
+   2,
+   2
+  ],
+  "이미 준 정보 다시 묻지 않기": [
+   2,
+   2
+  ],
+  "앞 답변 기억": [
+   2,
+   2
+  ]
+ },
+ "conversations": [
+  {
+   "seed": 7,
+   "scenario": "free_talk",
+   "summary": "Jason visited Busan last weekend with his sister, Jiwoo. They enjoyed eating a lot of seafood there, a popular activity in Busan. Mia suggested that trying special dishes in Busan would be a good experience for Jason.",
+   "rows": [
+    {
+     "user": "I went to Busan last weekend with my sister.",
+     "reply": "Oh, Busan! That sounds amazing! What did you guys do there?",
+     "judge": 5
+    },
+    {
+     "user": "We ate a lot of seafood. Her name is Jiwoo.",
+     "reply": "Seafood in Busan – you guys are in luck! That’s a must-do there. Did you try any really special dishes?",
+     "judge": 4
+    },
+    {
+     "user": "Do you like seafood?",
+     "reply": "Yeah, I love seafood! It’s so tasty, especially when it’s fresh. What about you, Jason – do you enjoy seafood too?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 4
+    },
+    {
+     "user": "The weather was very hot, so we went to the beach.",
+     "reply": "Wow, Busan sounds like a perfect getaway! The hot weather and beach – brilliant! Did you enjoy swimming?",
+     "judge": 2
+    },
+    {
+     "user": "Next month I want to go there again. Any ideas for me?",
+     "reply": "That’s fantastic! Maybe you could explore some of the smaller islands near Busan – they’re beautiful. What do you think, Jason?",
+     "probe": "앞 내용 활용",
+     "ok": true,
+     "judge": 3
+    },
+    {
+     "user": "By the way, do you remember who I went with?",
+     "reply": "Of course! You went with your sister, Jiwoo. Did you have a really fun time together?",
+     "probe": "사람 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "And which city did I visit?",
+     "reply": "You visited Busan, Jason! That’s where you went with Jiwoo last weekend. Did you both enjoy the seafood there?",
+     "probe": "장소 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "I have to go now. Bye!",
+     "reply": "Okay, bye Jason! Have a great day!",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 7,
+   "scenario": "free_talk",
+   "summary": "Jason started a new job at a bank in Seoul, waking up at 6 am. He told Mia that the job is hard. Mia expressed sympathy about his early morning schedule.",
+   "rows": [
+    {
+     "user": "I started a new job at a bank in Seoul.",
+     "reply": "Wow, that’s fantastic! A bank job – that’s a big step. What kind of work are you doing there?",
+     "judge": 5
+    },
+    {
+     "user": "It is hard because I have to wake up at 6.",
+     "reply": "Oh no, 6 am is brutal! That sounds tiring. What exactly do you do at the bank?",
+     "judge": 3
+    },
+    {
+     "user": "I usually take the subway. It takes one hour.",
+     "reply": "That’s a long commute, Jason! One hour on the subway – wow. Do you find it relaxing at all?",
+     "judge": 5
+    },
+    {
+     "user": "What do you do to relax after work?",
+     "reply": "I usually just chill at home, maybe watch some K-dramas. It’s nice to unwind after a long day. What about you, Jason?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Can you guess what time I wake up?",
+     "reply": "Let me guess… 6 am? You really do wake up early! What do you do first thing?",
+     "probe": "숫자 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Where do I work again?",
+     "reply": "You work at a bank in Seoul, Jason! That’s really interesting. Do you enjoy the work so far?",
+     "probe": "직장 기억",
+     "ok": true,
+     "judge": 4
+    },
+    {
+     "user": "Thanks. See you!",
+     "reply": "Okay, Jason! Have a great evening!",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 7,
+   "scenario": "cafe",
+   "summary": "",
+   "rows": [
+    {
+     "user": "Hi, can I get a medium iced latte with oat milk?",
+     "reply": "Okay, a medium iced latte with oat milk. Anything to eat with that today? Do you want a pastry?",
+     "probe": "이미 말한 주문을 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "No, just the drink.",
+     "reply": "Got it – just the iced latte. Would you like that to go, or for here?",
+     "probe": "이미 말한 주문을 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "For here, please.",
+     "reply": "Perfect! That’ll be $5. How will you be paying today?",
+     "probe": "이미 답한 것 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Can I pay by card?",
+     "reply": "Yes, absolutely! We take card payments here. Would you like to pay now?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Sorry, what did I order?",
+     "reply": "You ordered a medium iced latte with oat milk, for here. It will be ready in just a moment! Would you like a napkin?",
+     "probe": "주문 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Thank you!",
+     "reply": "You’re very welcome! I’m glad we got that sorted for you. Would you like anything else today?",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 7,
+   "scenario": "hotel",
+   "summary": "",
+   "rows": [
+    {
+     "user": "Hi, I have a reservation under Jason Kim. Here is my passport.",
+     "reply": "Okay, thank you for showing me your passport. We have your reservation here. Do you have any questions about that?",
+     "probe": "이미 준 정보 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "What time is breakfast?",
+     "reply": "Breakfast is served from 7:00 AM to 9:00 AM. Would you like to know about our Wi-Fi?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 4
+    },
+    {
+     "user": "Great. Is there a gym in the hotel?",
+     "reply": "Yes, we do have a fully equipped gym for our guests. Would you like the Wi-Fi password?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Sorry, what was the breakfast time again?",
+     "reply": "Breakfast is from 7:00 AM to 9:00 AM, Jason. Is there anything else you’d like to know?",
+     "probe": "앞 답변 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Thank you so much.",
+     "reply": "You’re very welcome! Your room is number 305. Do you need anything else for your stay?",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 8,
+   "scenario": "free_talk",
+   "summary": "Jason recently spent a weekend in Busan with his sister, Jiwoo, enjoying a lot of seafood. They had a fantastic time eating at Busan, and Jason particularly liked the seafood they ate. Mia was happy to hear about Jason’s trip and the delicious meal they shared.",
+   "rows": [
+    {
+     "user": "I went to Busan last weekend with my sister.",
+     "reply": "Oh, Busan! That sounds amazing! Did you guys do anything special there?",
+     "judge": 5
+    },
+    {
+     "user": "We ate a lot of seafood. Her name is Jiwoo.",
+     "reply": "Seafood in Busan – you guys must have had a feast! That sounds like a perfect weekend. What was your favorite dish?",
+     "judge": 5
+    },
+    {
+     "user": "Do you like seafood?",
+     "reply": "Yeah, I really do! I love trying all sorts of different kinds. What about you, Jason?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 2
+    },
+    {
+     "user": "The weather was very hot, so we went to the beach.",
+     "reply": "Wow, Busan is beautiful! The beach sounds like a great way to cool off from the heat. Did you build any sandcastles?",
+     "judge": 4
+    },
+    {
+     "user": "Next month I want to go there again. Any ideas for me?",
+     "reply": "That’s awesome! You could check out Haeundae Beach – it’s gorgeous. Have you ever been to Gamcheon Culture Village?",
+     "probe": "앞 내용 활용",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "By the way, do you remember who I went with?",
+     "reply": "Of course! You went with your sister, Jiwoo. What did you two enjoy most about the trip?",
+     "probe": "사람 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "And which city did I visit?",
+     "reply": "You went to Busan, Jason! That’s fantastic news. Did you have a really good time there?",
+     "probe": "장소 기억",
+     "ok": true,
+     "judge": 2
+    },
+    {
+     "user": "I have to go now. Bye!",
+     "reply": "Okay, bye Jason! Have a great day!",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 8,
+   "scenario": "free_talk",
+   "summary": "Jason started a new job at a bank in Seoul, waking up at 6:00 AM. He told Mia that the job is hard and tiring. Mia was happy to see him and asked about his day.",
+   "rows": [
+    {
+     "user": "I started a new job at a bank in Seoul.",
+     "reply": "Wow, that’s fantastic! A bank job must be exciting. What kind of work are you doing there?",
+     "judge": 5
+    },
+    {
+     "user": "It is hard because I have to wake up at 6.",
+     "reply": "Six o’clock? That’s early! I can imagine that’s tiring.",
+     "judge": 5
+    },
+    {
+     "user": "I usually take the subway. It takes one hour.",
+     "reply": "One hour on the subway – that sounds exhausting, Jason! What do you think of the commute?",
+     "judge": 5
+    },
+    {
+     "user": "What do you do to relax after work?",
+     "reply": "I usually make myself some coffee and read a bit. It helps me unwind after a long day. What about you, Jason?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 4
+    },
+    {
+     "user": "Can you guess what time I wake up?",
+     "reply": "Let me guess – six o'clock? You really do wake up early! What do you do to enjoy your mornings?",
+     "probe": "숫자 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Where do I work again?",
+     "reply": "You work at a bank in Seoul, Jason! That’s a big change, isn’t it? Do you enjoy the work so far?",
+     "probe": "직장 기억",
+     "ok": true,
+     "judge": 2
+    },
+    {
+     "user": "Thanks. See you!",
+     "reply": "Okay, see you soon, Jason! Have a good evening.",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 8,
+   "scenario": "cafe",
+   "summary": "",
+   "rows": [
+    {
+     "user": "Hi, can I get a medium iced latte with oat milk?",
+     "reply": "Okay, one medium iced latte with oat milk. Anything to eat with that, Jason?",
+     "probe": "이미 말한 주문을 다시 묻지 않기",
+     "ok": true,
+     "judge": 3
+    },
+    {
+     "user": "No, just the drink.",
+     "reply": "Got it! Just the iced latte then. Would you like to have it here or to go?",
+     "probe": "이미 말한 주문을 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "For here, please.",
+     "reply": "Perfect! One medium iced latte with oat milk, for here. How would you like to pay?",
+     "probe": "이미 답한 것 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Can I pay by card?",
+     "reply": "Yes, absolutely! We take card payments here. Would you like to order anything else while you wait?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Sorry, what did I order?",
+     "reply": "You ordered a medium iced latte with oat milk, for here. It’ll be just a minute!",
+     "probe": "주문 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Thank you!",
+     "reply": "You’re very welcome! That’ll be $5. Would you like a pastry with that?",
+     "judge": 5
+    }
+   ]
+  },
+  {
+   "seed": 8,
+   "scenario": "hotel",
+   "summary": "",
+   "rows": [
+    {
+     "user": "Hi, I have a reservation under Jason Kim. Here is my passport.",
+     "reply": "Okay, let me just confirm that. Yes, I see your reservation. Do you have any questions about that?",
+     "probe": "이미 준 정보 다시 묻지 않기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "What time is breakfast?",
+     "reply": "Breakfast is served from 7:00 AM to 9:00 AM. Would you like to know about our Wi-Fi?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 4
+    },
+    {
+     "user": "Great. Is there a gym in the hotel?",
+     "reply": "Yes, we have a small fitness center on the second floor. Would you like the Wi-Fi password?",
+     "probe": "질문에 답하기",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Sorry, what was the breakfast time again?",
+     "reply": "Breakfast is served from 7:00 AM to 9:00 AM, Jason. Is there anything else I can help you with?",
+     "probe": "앞 답변 기억",
+     "ok": true,
+     "judge": 5
+    },
+    {
+     "user": "Thank you so much.",
+     "reply": "Okay, your room is number 312. Let me know if you need anything else.",
+     "judge": 5
+    }
+   ]
+  }
+ ]
+}

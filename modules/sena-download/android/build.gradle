@@ -1,0 +1,21 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.sena.mobile'
+version = '1.0.0'
+
+android {
+  namespace "expo.modules.senadownload"
+  defaultConfig {
+    versionCode 1
+    versionName "1.0.0"
+  }
+}
+
+dependencies {
+  // 홈 화면 위젯 라이브러리와 같은 버전(이미 앱에 들어 있음)
+  implementation 'androidx.work:work-runtime:2.8.1'
+  implementation 'androidx.core:core:1.17.0'
+}

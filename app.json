@@ -1,0 +1,97 @@
+{
+  "expo": {
+    "name": "SENA",
+    "slug": "sena-mobile",
+    "version": "0.3.4",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sena.mobile"
+    },
+    "android": {
+      "package": "com.sena.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 8
+    },
+    "plugins": [
+      "expo-dev-client",
+      "onnxruntime-react-native",
+      "llama.rn",
+      [
+        "react-native-audio-api",
+        {
+          "iosMicrophonePermission": "영어 발화를 녹음해 발음을 평가합니다.",
+          "androidPermissions": [
+            "android.permission.RECORD_AUDIO"
+          ],
+          "androidForegroundService": false,
+          "iosBackgroundMode": false
+        }
+      ],
+      "expo-router",
+      "expo-sqlite",
+      "./plugins/withSenaAndroid",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "대화 리포트 이미지를 사진 앱에 저장하려고 사진 보관함에 접근해요.",
+          "savePhotosPermission": "대화 리포트 이미지를 사진 앱에 저장해요.",
+          "isAccessMediaLocationEnabled": false,
+          "granularPermissions": []
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-logo.png",
+          "imageWidth": 240,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "영어 발화를 녹음해 발음을 평가하고, 한국어로 도움받기에서 한국어를 받아써요.",
+          "speechRecognitionPermission": "한국어로 도움받기에서 하고 싶은 말을 기기 안에서 받아써요.",
+          "androidSpeechServicePackages": [
+            "com.google.android.as",
+            "com.google.android.googlequicksearchbox",
+            "com.google.android.tts"
+          ]
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "DailySentence",
+              "label": "SENA 오늘의 한 문장",
+              "description": "날마다 바뀌는 영어 문장을 눌러 바로 발음해 봐요",
+              "minWidth": "250dp",
+              "minHeight": "110dp",
+              "targetCellWidth": 4,
+              "targetCellHeight": 2,
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000,
+              "previewImage": "./assets/widget-preview.png"
+            }
+          ]
+        }
+      ]
+    ],
+    "scheme": "sena"
+  }
+}

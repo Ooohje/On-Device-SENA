@@ -1,0 +1,2077 @@
+{
+ "model": "gemma3:4b",
+ "judge": "qwen3:8b",
+ "items": 42,
+ "summary": {
+  "all": {
+   "n": 126,
+   "produced": 1,
+   "firstTry": 1,
+   "withinLimit": 0.9841269841269841,
+   "meanWords": 10.69047619047619,
+   "maxWords": 20,
+   "judged": 126,
+   "meaning": 4.571428571428571,
+   "context": 4.531746031746032,
+   "natural": 4.658730158730159,
+   "allAtLeast4": 0.8333333333333334
+  },
+  "easy": {
+   "n": 42,
+   "produced": 1,
+   "firstTry": 1,
+   "withinLimit": 1,
+   "meanWords": 8.642857142857142,
+   "maxWords": 12,
+   "judged": 42,
+   "meaning": 4.523809523809524,
+   "context": 4.476190476190476,
+   "natural": 4.595238095238095,
+   "allAtLeast4": 0.8095238095238095
+  },
+  "normal": {
+   "n": 42,
+   "produced": 1,
+   "firstTry": 1,
+   "withinLimit": 0.9523809523809523,
+   "meanWords": 11.19047619047619,
+   "maxWords": 20,
+   "judged": 42,
+   "meaning": 4.5476190476190474,
+   "context": 4.523809523809524,
+   "natural": 4.642857142857143,
+   "allAtLeast4": 0.8333333333333334
+  },
+  "native": {
+   "n": 42,
+   "produced": 1,
+   "firstTry": 1,
+   "withinLimit": 1,
+   "meanWords": 12.238095238095237,
+   "maxWords": 20,
+   "judged": 42,
+   "meaning": 4.642857142857143,
+   "context": 4.595238095238095,
+   "natural": 4.738095238095238,
+   "allAtLeast4": 0.8571428571428571
+  }
+ },
+ "rows": [
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "Hey Jason! It's so good to see you. How has your day been so far?",
+   "ko": "오늘 회사에서 너무 바빠서 점심도 못 먹었어",
+   "en": "Oh, sorry! I was really busy at work today.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 6989,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "Oh no! So what did you do this weekend?",
+   "ko": "친구랑 한강에서 치맥 했어",
+   "en": "I went to the Han River with a friend.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 160,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "That sounds fun. Do you go there often?",
+   "ko": "아니 한 달에 한 번 정도?",
+   "en": "Um, about once a month, maybe?",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 144,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "What kind of music do you like?",
+   "ko": "요즘은 잔잔한 노래가 좋더라",
+   "en": "I really like calm music these days, you know?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 143,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "Are you a morning person?",
+   "ko": "전혀요. 알람을 다섯 번은 꺼요",
+   "en": "Yes, definitely! I always set five alarms.",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 119,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "free_talk",
+   "partner": "Any plans for the holidays?",
+   "ko": "아직 정해진 건 없는데 제주도 갈까 생각 중이야",
+   "en": "Nothing is decided yet. I’m thinking about going to Jeju Island.",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 143,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Hi there, welcome to Sunny Bean! What can I get started for you today?",
+   "ko": "아이스 아메리카노 큰 사이즈로 한 잔 주세요",
+   "en": "I’d like a large iced Americano, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 124,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Sure. For here or to go?",
+   "ko": "가져갈게요",
+   "en": "To go, please. I want to take it away.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 127,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Would you like anything else?",
+   "ko": "케이크는 뭐가 제일 잘 나가요?",
+   "en": "What pastries are the most popular?",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 104,
+   "judge": {
+    "meaning": 4,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Our cheesecake is really popular.",
+   "ko": "그럼 그걸로 하나 주세요",
+   "en": "Okay, I’d like the cheesecake, please.",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 114,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Your total is 9 dollars and 50 cents.",
+   "ko": "카드 되나요?",
+   "en": "Yes, can I pay with a card?",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 108,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "cafe",
+   "partner": "Here you go. Enjoy!",
+   "ko": "빨대는 어디 있어요?",
+   "en": "Oh, thank you. Could I please have a straw?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 127,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Good afternoon. Passport, please. What is the purpose of your visit?",
+   "ko": "여행 왔어요. 일주일 있을 거예요",
+   "en": "I am here for a trip. I will stay for one week.",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 138,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Where will you be staying?",
+   "ko": "시내에 있는 호텔에 묵을 거예요",
+   "en": "I will be staying in a hotel in the city.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 118,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Do you have a return ticket?",
+   "ko": "네, 다음 주 금요일 비행기예요",
+   "en": "Yes, I have a flight back next Friday.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 107,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Is this your first time here?",
+   "ko": "아니요, 두 번째예요",
+   "en": "No, this is my second time in America.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 119,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Do you have anything to declare?",
+   "ko": "김이랑 과자밖에 없어요",
+   "en": "I don't have anything else to declare.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 155,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "airport",
+   "partner": "Okay. What do you do for work?",
+   "ko": "회사원이에요. 마케팅 일 해요",
+   "en": "I work in a company. I do marketing work.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 125,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "Good evening, welcome to the Harbor View Hotel. Do you have a reservation with us?",
+   "ko": "네, 김제이슨 이름으로 예약했어요",
+   "en": "Yes, I have a reservation under my name. Thank you.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 145,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "I see you booked two nights. Is that correct?",
+   "ko": "하루 더 연장할 수 있을까요?",
+   "en": "Actually, I’m here for three nights.",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 157,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "Would you like a high floor or a low floor?",
+   "ko": "조용한 방이면 상관없어요",
+   "en": "A quiet room is okay, please. I don’t mind.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 133,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "Breakfast is from 7 to 10.",
+   "ko": "체크아웃은 몇 시까지예요?",
+   "en": "Okay, thank you. So, when is check-out?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 158,
+   "judge": {
+    "meaning": 3,
+    "context": 2,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "Is there anything else I can help you with?",
+   "ko": "방에 수건이 하나밖에 없어요",
+   "en": "Oh, I just wanted to say there’s only one towel.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 135,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "hotel",
+   "partner": "Here is your key. Room 1205.",
+   "ko": "와이파이 비밀번호 좀 알려주세요",
+   "en": "Thank you. Could you please tell me the Wi-Fi password?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 132,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "Oh, hello! You look a little lost. Can I help you find something?",
+   "ko": "지하철역이 어디예요?",
+   "en": "I’m sorry, I’m lost. Where is the subway station?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 143,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "Go straight two blocks and turn left.",
+   "ko": "걸어서 얼마나 걸려요?",
+   "en": "I’m sorry, I don’t understand. How far is it?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 143,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "About ten minutes.",
+   "ko": "좀 멀다. 버스 타는 게 나을까요?",
+   "en": "It’s a bit far. Maybe I should take a bus?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 132,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "Which subway line do you need?",
+   "ko": "2호선이요. 시청 가야 돼요",
+   "en": "I need the line to City Hall, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 161,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "Do you see the big bank over there?",
+   "ko": "아 저 빨간 건물이요?",
+   "en": "Yes, that’s the red building you mean?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 120,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "directions",
+   "partner": "Yes, the station is right behind it.",
+   "ko": "정말 감사합니다. 덕분에 살았어요",
+   "en": "Thank you so much! That was very helpful, really.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 126,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "Hello Jason, thank you for joining us today. To start, could you tell me a little about yourself?",
+   "ko": "저는 3년 동안 마케팅 일을 했습니다",
+   "en": "I worked in marketing for three years.",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 141,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "Why do you want to work for us?",
+   "ko": "회사의 성장 가능성이 크다고 생각합니다",
+   "en": "I think your company has a lot of growth potential.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 163,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "What is your biggest strength?",
+   "ko": "책임감이 강하고 꼼꼼한 편입니다",
+   "en": "I am very responsible and detail-oriented.",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 149,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "Tell me about a time you faced a challenge.",
+   "ko": "마감이 촉박했는데 팀원들과 밤새서 끝냈어요",
+   "en": "I had a tight deadline.",
+   "attempts": 1,
+   "words": 5,
+   "withinLimit": true,
+   "ms": 141,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "Where do you see yourself in five years?",
+   "ko": "팀을 이끄는 리더가 되고 싶습니다",
+   "en": "I want to be a leader, guiding my team.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 154,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "interview",
+   "partner": "Do you have any questions for us?",
+   "ko": "입사하면 어떤 교육을 받나요?",
+   "en": "Yes, I do have a question.",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 159,
+   "judge": {
+    "meaning": 1,
+    "context": 1,
+    "natural": 1
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "Hi, welcome in! Are you looking for anything in particular today?",
+   "ko": "그냥 구경하는 중이에요",
+   "en": "I’m just looking around, please.",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 107,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "Let me know if you need any help.",
+   "ko": "이거 다른 색상도 있어요?",
+   "en": "Yes, do you have this in other colors?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 110,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "We have it in black and navy.",
+   "ko": "네이비로 입어볼 수 있을까요?",
+   "en": "Yes, please can I try it on in navy?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 115,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "How does it fit?",
+   "ko": "좀 끼어요. 한 치수 큰 거 있어요?",
+   "en": "It’s a little tight. Do you have a size bigger?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 129,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "This one is 30 percent off today.",
+   "ko": "좀 더 깎아주시면 안 돼요?",
+   "en": "Could you please give me a little more discount?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 114,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "easy",
+   "scenario": "shopping",
+   "partner": "Will that be all?",
+   "ko": "네, 선물 포장도 해 주세요",
+   "en": "Yes, please wrap up these jackets for gifts.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 110,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "Hey Jason! It's so good to see you. How has your day been so far?",
+   "ko": "오늘 회사에서 너무 바빠서 점심도 못 먹었어",
+   "en": "Oh, man, it’s been crazy busy at work today, and I missed lunch.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 162,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "Oh no! So what did you do this weekend?",
+   "ko": "친구랑 한강에서 치맥 했어",
+   "en": "Oh, that sounds fun!",
+   "attempts": 1,
+   "words": 4,
+   "withinLimit": true,
+   "ms": 179,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "That sounds fun. Do you go there often?",
+   "ko": "아니 한 달에 한 번 정도?",
+   "en": "Oh, about once a month, maybe?",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 112,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "What kind of music do you like?",
+   "ko": "요즘은 잔잔한 노래가 좋더라",
+   "en": "Oh, you know, I’ve been really into calm, relaxing music lately.",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 151,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "Are you a morning person?",
+   "ko": "전혀요. 알람을 다섯 번은 꺼요",
+   "en": "Oh, absolutely! I need a lot of alarms – usually five or six to get going.",
+   "attempts": 1,
+   "words": 15,
+   "withinLimit": true,
+   "ms": 158,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "free_talk",
+   "partner": "Any plans for the holidays?",
+   "ko": "아직 정해진 건 없는데 제주도 갈까 생각 중이야",
+   "en": "Nothing’s really decided yet, but I’m thinking about going to Jeju Island.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 156,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Hi there, welcome to Sunny Bean! What can I get started for you today?",
+   "ko": "아이스 아메리카노 큰 사이즈로 한 잔 주세요",
+   "en": "I’d like a large iced Americano, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 127,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Sure. For here or to go?",
+   "ko": "가져갈게요",
+   "en": "To go, please.",
+   "attempts": 1,
+   "words": 3,
+   "withinLimit": true,
+   "ms": 98,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Would you like anything else?",
+   "ko": "케이크는 뭐가 제일 잘 나가요?",
+   "en": "What pastries are the most popular, please?",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 118,
+   "judge": {
+    "meaning": 3,
+    "context": 2,
+    "natural": 3
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Our cheesecake is really popular.",
+   "ko": "그럼 그걸로 하나 주세요",
+   "en": "Okay, then I’ll take one of your cheesecakes, please.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 148,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Your total is 9 dollars and 50 cents.",
+   "ko": "카드 되나요?",
+   "en": "Oh, do we take card payments?",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 110,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "cafe",
+   "partner": "Here you go. Enjoy!",
+   "ko": "빨대는 어디 있어요?",
+   "en": "Could you please pass me a straw, please?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 120,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Good afternoon. Passport, please. What is the purpose of your visit?",
+   "ko": "여행 왔어요. 일주일 있을 거예요",
+   "en": "I’m here for a week, visiting for business.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 123,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Where will you be staying?",
+   "ko": "시내에 있는 호텔에 묵을 거예요",
+   "en": "I’m staying at a hotel downtown, yes.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 122,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Do you have a return ticket?",
+   "ko": "네, 다음 주 금요일 비행기예요",
+   "en": "Yes, I do, I have a flight back next Friday.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 135,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Is this your first time here?",
+   "ko": "아니요, 두 번째예요",
+   "en": "No, this is my second time visiting the United States.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 128,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Do you have anything to declare?",
+   "ko": "김이랑 과자밖에 없어요",
+   "en": "Just my passport and a few snacks, nothing else to declare.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 139,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "airport",
+   "partner": "Okay. What do you do for work?",
+   "ko": "회사원이에요. 마케팅 일 해요",
+   "en": "I work in marketing, it’s a business job for a company.",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 146,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "Good evening, welcome to the Harbor View Hotel. Do you have a reservation with us?",
+   "ko": "네, 김제이슨 이름으로 예약했어요",
+   "en": "Yes, I do have a reservation under my name, Jason Kim.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 159,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "I see you booked two nights. Is that correct?",
+   "ko": "하루 더 연장할 수 있을까요?",
+   "en": "Actually, I had a reservation for three nights, could I please extend it for one more day?",
+   "attempts": 1,
+   "words": 17,
+   "withinLimit": true,
+   "ms": 190,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "Would you like a high floor or a low floor?",
+   "ko": "조용한 방이면 상관없어요",
+   "en": "That’s fine, as long as it’s a quiet room.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 143,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "Breakfast is from 7 to 10.",
+   "ko": "체크아웃은 몇 시까지예요?",
+   "en": "Okay, so, that’s great about breakfast, but when can I check out?",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 175,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "Is there anything else I can help you with?",
+   "ko": "방에 수건이 하나밖에 없어요",
+   "en": "Actually, there’s only one towel in the room. Could I please get an extra one?",
+   "attempts": 1,
+   "words": 16,
+   "withinLimit": true,
+   "ms": 181,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "hotel",
+   "partner": "Here is your key. Room 1205.",
+   "ko": "와이파이 비밀번호 좀 알려주세요",
+   "en": "Could you please tell me the Wi-Fi password?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 133,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "Oh, hello! You look a little lost. Can I help you find something?",
+   "ko": "지하철역이 어디예요?",
+   "en": "Oh, sorry, I’m a bit lost. Where is the nearest subway station?",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 175,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "Go straight two blocks and turn left.",
+   "ko": "걸어서 얼마나 걸려요?",
+   "en": "Could you tell me how far it is to walk?",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 125,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "About ten minutes.",
+   "ko": "좀 멀다. 버스 타는 게 나을까요?",
+   "en": "Oh, really? It’s a bit further than I thought, maybe I should take the bus.",
+   "attempts": 1,
+   "words": 16,
+   "withinLimit": true,
+   "ms": 198,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "Which subway line do you need?",
+   "ko": "2호선이요. 시청 가야 돼요",
+   "en": "I need the line to City Hall, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 212,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "Do you see the big bank over there?",
+   "ko": "아 저 빨간 건물이요?",
+   "en": "Yes, that’s the red building you were pointing at, isn’t it?",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 159,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "directions",
+   "partner": "Yes, the station is right behind it.",
+   "ko": "정말 감사합니다. 덕분에 살았어요",
+   "en": "Oh, that’s brilliant, thank you so much for letting me know! I really appreciate it.",
+   "attempts": 1,
+   "words": 16,
+   "withinLimit": true,
+   "ms": 189,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "Hello Jason, thank you for joining us today. To start, could you tell me a little about yourself?",
+   "ko": "저는 3년 동안 마케팅 일을 했습니다",
+   "en": "Okay, I’ve been working in marketing for three years now.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 204,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "Why do you want to work for us?",
+   "ko": "회사의 성장 가능성이 크다고 생각합니다",
+   "en": "I’m really impressed by your company’s growth potential and I’d like to be a part of it.",
+   "attempts": 1,
+   "words": 20,
+   "withinLimit": false,
+   "ms": 200,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "What is your biggest strength?",
+   "ko": "책임감이 강하고 꼼꼼한 편입니다",
+   "en": "I’m a very reliable person and I’m known for being detail-oriented.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 175,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "Tell me about a time you faced a challenge.",
+   "ko": "마감이 촉박했는데 팀원들과 밤새서 끝냈어요",
+   "en": "I once had a really tight deadline, and my team and I worked through the night to finish it.",
+   "attempts": 1,
+   "words": 19,
+   "withinLimit": false,
+   "ms": 173,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "Where do you see yourself in five years?",
+   "ko": "팀을 이끄는 리더가 되고 싶습니다",
+   "en": "I really hope to be leading a team and growing within the company.",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 138,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "interview",
+   "partner": "Do you have any questions for us?",
+   "ko": "입사하면 어떤 교육을 받나요?",
+   "en": "Yes, absolutely! Could you tell me about the training opportunities available?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 151,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "Hi, welcome in! Are you looking for anything in particular today?",
+   "ko": "그냥 구경하는 중이에요",
+   "en": "I’m just looking around and seeing what’s here.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 133,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "Let me know if you need any help.",
+   "ko": "이거 다른 색상도 있어요?",
+   "en": "Actually, do you have this jacket in other colors?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 127,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "We have it in black and navy.",
+   "ko": "네이비로 입어볼 수 있을까요?",
+   "en": "Yes, please, could I try it on in navy?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 139,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "How does it fit?",
+   "ko": "좀 끼어요. 한 치수 큰 거 있어요?",
+   "en": "It’s a little tight, actually. Do you have a size up, please?",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 171,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "This one is 30 percent off today.",
+   "ko": "좀 더 깎아주시면 안 돼요?",
+   "en": "Oh, could you maybe give me a little more discount?",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 127,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "normal",
+   "scenario": "shopping",
+   "partner": "Will that be all?",
+   "ko": "네, 선물 포장도 해 주세요",
+   "en": "Yes, please wrap up these jackets for a gift too, please.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 153,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "Hey Jason! It's so good to see you. How has your day been so far?",
+   "ko": "오늘 회사에서 너무 바빠서 점심도 못 먹었어",
+   "en": "Oh my gosh, it’s been crazy busy at work, I didn’t even get a lunch break!",
+   "attempts": 1,
+   "words": 18,
+   "withinLimit": true,
+   "ms": 191,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "Oh no! So what did you do this weekend?",
+   "ko": "친구랑 한강에서 치맥 했어",
+   "en": "Oh, that’s awesome! I went out with a friend and had some chicken and beer by the Han River.",
+   "attempts": 1,
+   "words": 20,
+   "withinLimit": true,
+   "ms": 199,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "That sounds fun. Do you go there often?",
+   "ko": "아니 한 달에 한 번 정도?",
+   "en": "Oh, not really, maybe about once a month.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 129,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "What kind of music do you like?",
+   "ko": "요즘은 잔잔한 노래가 좋더라",
+   "en": "Oh, you know, I’ve been really into mellow music lately, it’s so relaxing.",
+   "attempts": 1,
+   "words": 15,
+   "withinLimit": true,
+   "ms": 201,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "Are you a morning person?",
+   "ko": "전혀요. 알람을 다섯 번은 꺼요",
+   "en": "Absolutely not! I hit snooze like five times, honestly.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 132,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "free_talk",
+   "partner": "Any plans for the holidays?",
+   "ko": "아직 정해진 건 없는데 제주도 갈까 생각 중이야",
+   "en": "Oh, not really yet, but I'm thinking about maybe going to Jeju Island for the holidays.",
+   "attempts": 1,
+   "words": 17,
+   "withinLimit": true,
+   "ms": 185,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Hi there, welcome to Sunny Bean! What can I get started for you today?",
+   "ko": "아이스 아메리카노 큰 사이즈로 한 잔 주세요",
+   "en": "I’d like a large iced Americano, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 147,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Sure. For here or to go?",
+   "ko": "가져갈게요",
+   "en": "To go, please.",
+   "attempts": 1,
+   "words": 3,
+   "withinLimit": true,
+   "ms": 109,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 3
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Would you like anything else?",
+   "ko": "케이크는 뭐가 제일 잘 나가요?",
+   "en": "What pastries are the most popular, please?",
+   "attempts": 1,
+   "words": 7,
+   "withinLimit": true,
+   "ms": 120,
+   "judge": {
+    "meaning": 3,
+    "context": 2,
+    "natural": 3
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Our cheesecake is really popular.",
+   "ko": "그럼 그걸로 하나 주세요",
+   "en": "Oh, really? I’ll take one of those cheesecakes, please.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 159,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Your total is 9 dollars and 50 cents.",
+   "ko": "카드 되나요?",
+   "en": "Oh, do you take card payments?",
+   "attempts": 1,
+   "words": 6,
+   "withinLimit": true,
+   "ms": 112,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "cafe",
+   "partner": "Here you go. Enjoy!",
+   "ko": "빨대는 어디 있어요?",
+   "en": "Oh, could you please pass me a straw?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 124,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Good afternoon. Passport, please. What is the purpose of your visit?",
+   "ko": "여행 왔어요. 일주일 있을 거예요",
+   "en": "I’m here for a week, just visiting for a trip.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 152,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Where will you be staying?",
+   "ko": "시내에 있는 호텔에 묵을 거예요",
+   "en": "I’m staying at a hotel downtown, I think.",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 133,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Do you have a return ticket?",
+   "ko": "네, 다음 주 금요일 비행기예요",
+   "en": "Yes, I do, I have a flight back next Friday.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 141,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Is this your first time here?",
+   "ko": "아니요, 두 번째예요",
+   "en": "No, this is actually my second time visiting the United States.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 138,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Do you have anything to declare?",
+   "ko": "김이랑 과자밖에 없어요",
+   "en": "Just my passport and a few snacks, nothing else to declare.",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 172,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "airport",
+   "partner": "Okay. What do you do for work?",
+   "ko": "회사원이에요. 마케팅 일 해요",
+   "en": "I work in marketing, basically. I’m an office worker.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 160,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "Good evening, welcome to the Harbor View Hotel. Do you have a reservation with us?",
+   "ko": "네, 김제이슨 이름으로 예약했어요",
+   "en": "Yes, I do have a reservation under the name Jason Kim for three nights.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 163,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "I see you booked two nights. Is that correct?",
+   "ko": "하루 더 연장할 수 있을까요?",
+   "en": "Actually, I had a reservation for three nights. Could I please extend my stay for one more night?",
+   "attempts": 1,
+   "words": 18,
+   "withinLimit": true,
+   "ms": 192,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "Would you like a high floor or a low floor?",
+   "ko": "조용한 방이면 상관없어요",
+   "en": "Actually, any quiet room would be fine, please.",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 125,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "Breakfast is from 7 to 10.",
+   "ko": "체크아웃은 몇 시까지예요?",
+   "en": "Okay, that’s great! Just confirming, what time is check-out?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 155,
+   "judge": {
+    "meaning": 3,
+    "context": 2,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "Is there anything else I can help you with?",
+   "ko": "방에 수건이 하나밖에 없어요",
+   "en": "Oh, actually, there’s only one towel in the room.",
+   "attempts": 1,
+   "words": 10,
+   "withinLimit": true,
+   "ms": 146,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "hotel",
+   "partner": "Here is your key. Room 1205.",
+   "ko": "와이파이 비밀번호 좀 알려주세요",
+   "en": "Thank you so much! Could you please tell me the Wi-Fi password?",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 151,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "Oh, hello! You look a little lost. Can I help you find something?",
+   "ko": "지하철역이 어디예요?",
+   "en": "Oh, sorry, I am a bit lost. Could you tell me where the nearest tube station is?",
+   "attempts": 1,
+   "words": 17,
+   "withinLimit": true,
+   "ms": 178,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "Go straight two blocks and turn left.",
+   "ko": "걸어서 얼마나 걸려요?",
+   "en": "Could you tell me roughly how far it is to walk?",
+   "attempts": 1,
+   "words": 11,
+   "withinLimit": true,
+   "ms": 135,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "About ten minutes.",
+   "ko": "좀 멀다. 버스 타는 게 나을까요?",
+   "en": "Oh, really? It’s a bit further than I thought, so maybe I should take the bus instead?",
+   "attempts": 1,
+   "words": 18,
+   "withinLimit": true,
+   "ms": 185,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "Which subway line do you need?",
+   "ko": "2호선이요. 시청 가야 돼요",
+   "en": "Oh, the number 2 line would be great, I need to get to City Hall.",
+   "attempts": 1,
+   "words": 15,
+   "withinLimit": true,
+   "ms": 174,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "Do you see the big bank over there?",
+   "ko": "아 저 빨간 건물이요?",
+   "en": "Oh, yes, that red building you pointed out?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 135,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "directions",
+   "partner": "Yes, the station is right behind it.",
+   "ko": "정말 감사합니다. 덕분에 살았어요",
+   "en": "Oh, that’s brilliant, thank you so much – you’ve really saved me!",
+   "attempts": 1,
+   "words": 13,
+   "withinLimit": true,
+   "ms": 164,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "Hello Jason, thank you for joining us today. To start, could you tell me a little about yourself?",
+   "ko": "저는 3년 동안 마케팅 일을 했습니다",
+   "en": "Okay, absolutely. I spent three years working in marketing, and I’m really eager to learn more about this opportunity.",
+   "attempts": 1,
+   "words": 20,
+   "withinLimit": true,
+   "ms": 201,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "Why do you want to work for us?",
+   "ko": "회사의 성장 가능성이 크다고 생각합니다",
+   "en": "I’m really drawn to your company’s significant growth potential and exciting future.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 166,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "What is your biggest strength?",
+   "ko": "책임감이 강하고 꼼꼼한 편입니다",
+   "en": "I’m a very reliable person and I’m known for being detail-oriented.",
+   "attempts": 1,
+   "words": 14,
+   "withinLimit": true,
+   "ms": 162,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "Tell me about a time you faced a challenge.",
+   "ko": "마감이 촉박했는데 팀원들과 밤새서 끝냈어요",
+   "en": "I once had a really tight deadline, and my team and I worked through the night to get it done.",
+   "attempts": 1,
+   "words": 20,
+   "withinLimit": true,
+   "ms": 183,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "Where do you see yourself in five years?",
+   "ko": "팀을 이끄는 리더가 되고 싶습니다",
+   "en": "I really hope to be leading a team and growing within the company in five years.",
+   "attempts": 1,
+   "words": 16,
+   "withinLimit": true,
+   "ms": 150,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "interview",
+   "partner": "Do you have any questions for us?",
+   "ko": "입사하면 어떤 교육을 받나요?",
+   "en": "Yes, that’s a great question. Could you tell me about the training opportunities available?",
+   "attempts": 1,
+   "words": 15,
+   "withinLimit": true,
+   "ms": 167,
+   "judge": {
+    "meaning": 3,
+    "context": 3,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "Hi, welcome in! Are you looking for anything in particular today?",
+   "ko": "그냥 구경하는 중이에요",
+   "en": "Just browsing, actually. I’m just looking at the jackets and sweaters.",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 152,
+   "judge": {
+    "meaning": 4,
+    "context": 4,
+    "natural": 4
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "Let me know if you need any help.",
+   "ko": "이거 다른 색상도 있어요?",
+   "en": "Oh, do you have this in other colors, please?",
+   "attempts": 1,
+   "words": 9,
+   "withinLimit": true,
+   "ms": 138,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "We have it in black and navy.",
+   "ko": "네이비로 입어볼 수 있을까요?",
+   "en": "Could I try it on in navy, please?",
+   "attempts": 1,
+   "words": 8,
+   "withinLimit": true,
+   "ms": 115,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "How does it fit?",
+   "ko": "좀 끼어요. 한 치수 큰 거 있어요?",
+   "en": "It feels a little tight, actually. Do you have a size up in this one?",
+   "attempts": 1,
+   "words": 15,
+   "withinLimit": true,
+   "ms": 157,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "This one is 30 percent off today.",
+   "ko": "좀 더 깎아주시면 안 돼요?",
+   "en": "Oh, really? Could you possibly go a little lower on the price?",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 148,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  },
+  {
+   "level": "native",
+   "scenario": "shopping",
+   "partner": "Will that be all?",
+   "ko": "네, 선물 포장도 해 주세요",
+   "en": "Actually, could you please wrap these up as a gift for me?",
+   "attempts": 1,
+   "words": 12,
+   "withinLimit": true,
+   "ms": 141,
+   "judge": {
+    "meaning": 5,
+    "context": 5,
+    "natural": 5
+   }
+  }
+ ]
+}
