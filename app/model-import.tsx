@@ -2,12 +2,15 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { checkDevice, DeviceCheck, Mark } from '../src/models/deviceCheck';
 import { cancelLlmDownload, DownloadState, LLM_BYTES, pollLlmDownload, startLlmDownload } from '../src/models/llmImport';
 import { Glass } from '../src/ui/Glass';
 import { showAlert } from '../src/ui/Dialog';
 import { C, font } from '../src/ui/theme';
 
 const gb = (n: number) => (n / 1e9).toFixed(2);
+const MARK_ICON = { ok: 'checkmark-circle', warn: 'alert-circle', fail: 'close-circle' } as const satisfies Record<Mark, string>;
+const MARK_COLOR: Record<Mark, string> = { ok: C.green, warn: C.orange, fail: C.red };
 
 // 대화 모델 받기: 버튼 한 번이면 휴대폰 다운로드 관리자가 받는다(src/models/llmImport.ts).
 // 앱을 닫거나 튜토리얼을 하는 동안에도 계속 받고, 상단바를 내리면 진행률이 보인다. 이 화면은 1초마다 상태를 읽어 보여 줄 뿐이다
@@ -16,6 +19,8 @@ export default function ModelImport() {
   const goHome = () => router.replace('/');
   const [st, setSt] = useState<DownloadState>(() => pollLlmDownload());
   const announced = useRef(st.phase === 'done'); // 이 화면에서 끝난 경우에만 알림을 띄운다
+  // 받기 전에 기기 사양(RAM·저장 공간·프로세서·OS)을 먼저 확인한다. 최소 사양이 안 되면 받기를 막고 튜토리얼로 안내한다
+  const [chk, setChk] = useState<DeviceCheck>(() => checkDevice());
 
   const busy = st.phase === 'running' || st.phase === 'waiting';
   useEffect(() => {
@@ -33,6 +38,9 @@ export default function ModelImport() {
   }, [busy]);
 
   const start = async () => {
+    const c = checkDevice(); // 저장 공간은 화면을 연 뒤 바뀌었을 수 있다
+    setChk(c);
+    if (!c.canDownload) return showAlert(c.verdict === 'unsupported' ? '이 기기에서는 받을 수 없어요' : '저장 공간이 부족해요', c.summary);
     try {
       await startLlmDownload();
       setSt(pollLlmDownload());
@@ -86,6 +94,28 @@ export default function ModelImport() {
         ) : null}
       </Glass>
 
+      {done || busy ? null : (
+        <Glass style={s.checkCard}>
+          <Text style={s.checkTitle}>기기 사양 확인</Text>
+          {chk.rows.map((r) => (
+            <View key={r.key} style={s.checkRow}>
+              <Ionicons name={MARK_ICON[r.mark]} size={20} color={MARK_COLOR[r.mark]} />
+              <View style={{ flex: 1 }}>
+                <Text style={s.checkLabel}>{r.label}</Text>
+                <Text style={[s.checkNeed, r.mark !== 'ok' && { color: MARK_COLOR[r.mark] }]}>{r.need}</Text>
+              </View>
+              <Text style={s.checkValue}>{r.value}</Text>
+            </View>
+          ))}
+          <Text style={[s.checkSummary, { color: chk.verdict === 'unsupported' ? C.red : !chk.storageOk ? C.orange : C.secondary }]}>{chk.summary}</Text>
+          {chk.verdict !== 'unsupported' && !chk.storageOk ? (
+            <Pressable onPress={() => setChk(checkDevice())} style={s.recheck}>
+              <Text style={s.laterText}>공간을 비웠어요 · 다시 확인</Text>
+            </Pressable>
+          ) : null}
+        </Glass>
+      )}
+
       {done ? (
         <Pressable onPress={() => (first || !router.canGoBack() ? goHome() : router.back())} style={s.primary}>
           <Text style={s.primaryText}>대화하러 가기</Text>
@@ -101,13 +131,17 @@ export default function ModelImport() {
             <Text style={[s.primaryText, { color: C.red }]}>받기 취소</Text>
           </Pressable>
         </>
+      ) : chk.verdict === 'unsupported' ? (
+        <Pressable onPress={goHome} style={s.primary}>
+          <Text style={s.primaryText}>튜토리얼 시작하기</Text>
+        </Pressable>
       ) : (
-        <Pressable onPress={start} style={s.primary}>
+        <Pressable onPress={start} disabled={!chk.canDownload} style={[s.primary, !chk.canDownload && s.disabled]}>
           <Ionicons name="cloud-download" size={18} color="#fff" />
           <Text style={s.primaryText}>{st.phase === 'failed' ? '다시 받기' : '대화 모델 받기'}</Text>
         </Pressable>
       )}
-      {first && !busy && !done ? (
+      {first && !busy && !done && chk.verdict !== 'unsupported' ? (
         // 지금 받기 어려우면 튜토리얼부터 쓸 수 있게 한다. 나중에 대화 탭이나 설정에서 받을 수 있다
         <Pressable onPress={goHome} style={s.later}>
           <Text style={s.laterText}>나중에 하기 (튜토리얼만 쓰기)</Text>
@@ -130,6 +164,15 @@ const s = StyleSheet.create({
   primary: { flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', backgroundColor: C.blue, borderRadius: 14, paddingVertical: 15, marginTop: 20 },
   secondary: { backgroundColor: C.fill, marginTop: 12 },
   primaryText: { ...font.headline, color: '#fff' },
+  checkCard: { borderRadius: 20, padding: 18, marginTop: 16 },
+  checkTitle: { ...font.headline, color: C.label, marginBottom: 6 },
+  checkRow: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingVertical: 8 },
+  checkLabel: { ...font.subhead, color: C.label },
+  checkNeed: { ...font.footnote, color: C.secondary, marginTop: 1 },
+  checkValue: { ...font.subhead, color: C.secondary },
+  checkSummary: { ...font.footnote, marginTop: 10, lineHeight: 18 },
+  recheck: { alignSelf: 'flex-start', marginTop: 6, paddingVertical: 6 },
+  disabled: { opacity: 0.4 },
   later: { alignSelf: 'center', marginTop: 14, padding: 10 },
   laterText: { ...font.subhead, color: C.blue },
 });

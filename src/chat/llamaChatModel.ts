@@ -1,4 +1,5 @@
 import * as Device from 'expo-device';
+import { RAM_MIN_GB } from '../models/deviceCheck';
 import { initLlama, LlamaContext } from 'llama.rn';
 import { llmPath, PATHS } from '../paths';
 import { ChatMessage, ChatModel, GenerateOptions } from './types';
@@ -53,7 +54,7 @@ export function loadChatModel(): Promise<ChatModel> {
         current = null;
         // Gemma 3 4B(약 2.5GB)는 RAM 6GB 이상 기기를 권장한다. 메모리가 부족하면 로드가 실패한다
         const gb = (Device.totalMemory ?? 0) / 1024 ** 3;
-        if (gb && gb < 5.5) throw new Error(`대화 모델을 올리지 못했어요. 이 기기의 메모리(${gb.toFixed(1)}GB)가 부족할 수 있어요. 대화 기능은 RAM 6GB 이상 기기를 권장해요.
+        if (gb && gb < RAM_MIN_GB) throw new Error(`대화 모델을 올리지 못했어요. 이 기기의 메모리(${gb.toFixed(1)}GB)가 부족할 수 있어요. 대화 기능은 RAM 6GB 이상 기기를 권장해요.
 (${e?.message ?? e})`);
         throw e;
       });

@@ -12,7 +12,7 @@ import { setLlmDownloadId } from '../store/db';
 // 모델 파일: Google Drive 영어 발화 피드백 모델/APK/SENA-model-gemma3-4b.gguf ("링크가 있는 모든 사용자" 보기 권한 필요)
 const LLM_URL = 'https://drive.usercontent.google.com/download?id=1ev1iEDBOXXr_1Trw5HOsBH9JRFL3njXt&export=download&confirm=t';
 export const LLM_BYTES = 2_499_012_288; // C:\dev\sena-models\llm.gguf와 같은 크기. 받은 파일이 이 크기가 아니면 버린다
-const NEED_FREE = LLM_BYTES + 300e6; // 받는 동안 여유 공간
+export const NEED_FREE = LLM_BYTES + 300e6; // 받는 동안 여유 공간
 
 // 파일 다루기: Android는 네이티브 모듈(외부 저장소에 쓸 수 있음), iOS는 expo-file-system(내부 저장소)
 const fsx = {

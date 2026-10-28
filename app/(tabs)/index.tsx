@@ -1,8 +1,8 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import * as Device from 'expo-device';
 import { Redirect, router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { checkDevice, ramGb, ramVerdict } from '../../src/models/deviceCheck';
 import { LEVELS, levelById } from '../../src/chat/levels';
 import { DownloadState, hasLlm, pollLlmDownload } from '../../src/models/llmImport';
 import { SCENARIOS } from '../../src/chat/scenarios';
@@ -21,9 +21,11 @@ const ICON_COLORS: Record<string, string> = {
   shopping: C.pink,
 };
 
-// 대화 모델(Gemma 3 4B)은 RAM 6GB 미만 기기에서 느리거나 메모리가 부족할 수 있다
-const ramGb = Device.totalMemory ? Device.totalMemory / 1024 ** 3 : null;
-const lowRam = ramGb !== null && ramGb < 5.5;
+// 대화 모델(Gemma 3 4B) 사양: 기준은 src/models/deviceCheck.ts 한 곳에서 정한다
+const ram = ramGb();
+const ramMark = ramVerdict();
+const lowRam = ramMark === 'warn';
+const unsupported = checkDevice().verdict === 'unsupported';
 
 export default function ChatTab() {
   const [name, setNameState] = useState(getName());
@@ -52,8 +54,8 @@ export default function ChatTab() {
           <Glass style={s.banner}>
             <Ionicons name="download" size={22} color={C.blue} />
             <View style={{ flex: 1 }}>
-              <Text style={s.bannerTitle}>{dl.phase === 'running' || dl.phase === 'waiting' ? `대화 모델 받는 중 ${Math.floor((dl.got / dl.total) * 100)}%` : '대화 모델 받기'}</Text>
-              <Text style={s.bannerBody}>{dl.phase === 'running' || dl.phase === 'waiting' ? '다 받으면 바로 대화할 수 있어요. 그동안 튜토리얼을 해 보세요.' : '대화를 시작하려면 AI 모델(약 2.5GB)을 한 번 받아야 해요.'}</Text>
+              <Text style={s.bannerTitle}>{unsupported && dl.phase !== 'running' && dl.phase !== 'waiting' ? '이 기기는 대화 모델 사양이 부족해요' : dl.phase === 'running' || dl.phase === 'waiting' ? `대화 모델 받는 중 ${Math.floor((dl.got / dl.total) * 100)}%` : '대화 모델 받기'}</Text>
+              <Text style={s.bannerBody}>{unsupported && dl.phase !== 'running' && dl.phase !== 'waiting' ? '눌러서 기기 사양을 확인해 보세요. 튜토리얼은 그대로 쓸 수 있어요.' : dl.phase === 'running' || dl.phase === 'waiting' ? '다 받으면 바로 대화할 수 있어요. 그동안 튜토리얼을 해 보세요.' : '대화를 시작하려면 AI 모델(약 2.5GB)을 한 번 받아야 해요.'}</Text>
             </View>
             <Ionicons name="chevron-forward" size={18} color={C.tertiary} />
           </Glass>
@@ -87,7 +89,7 @@ export default function ChatTab() {
 
       <Section
         header="상황 고르기"
-        footer={lowRam ? `이 기기의 메모리(${ramGb!.toFixed(1)}GB)에서는 대화 응답이 느릴 수 있어요.` : '대화 상대가 이름을 부르고, 지난 대화 내용을 기억해요.'}
+        footer={lowRam ? `이 기기의 메모리(${ram!.toFixed(1)}GB)에서는 대화 응답이 조금 느릴 수 있어요.` : '대화 상대가 이름을 부르고, 지난 대화 내용을 기억해요.'}
       >
         {SCENARIOS.map((sc) => (
           <Row
