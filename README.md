@@ -14,6 +14,8 @@ AI 대화 상대와 상황별 역할극을 하고, 내 발음·운율을 연구�
 
 <p align="center"><a href="https://drive.google.com/file/d/1Y92tkqzd2Bvbn27Cs-WWmfHy80HUrEj1/view?usp=drive_link"><b>⬇ Android 시험 APK 받기 (v0.3.5)</b></a></p>
 
+<p align="center"><a href="https://docs.google.com/document/d/1csShodxzjYCmOMecz34u4p3irYEdh1ba/edit"><b>📄 논문 자료 보기</b></a></p>
+
 ## 목차
 
 1. [주요 기능](#1-주요-기능)
