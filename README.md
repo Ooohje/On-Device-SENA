@@ -51,27 +51,27 @@ AI 대화 상대와 상황별 역할극을 하고, 내 발음·운율을 연구�
 
 | 스플래시 | 홈(대화 탭) | 대화 모델 받기 | 설정 |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/01_splash.png" width="200"> | <img src="docs/screenshots/02_home.png" width="200"> | <img src="docs/screenshots/03_model_download.png" width="200"> | <img src="docs/screenshots/13_settings.png" width="200"> |
-| 첫 화면 | 난이도와 상황 고르기 | 첫 실행 때 한 번 (2.5GB, 백그라운드·이어 받기) | 대화 모델 지우기로 2.5GB 확보 가능 |
+| <img src="docs/screenshots/01_splash.png" width="180"> | <img src="docs/screenshots/02_home.png" width="180"> | <img src="docs/screenshots/03_model_download.png" width="180"> | <img src="docs/screenshots/13_settings.png" width="180"> |
+| 첫 화면 | 난이도와<br>상황 고르기 | 첫 실행 때 한 번<br>(2.5GB, 이어 받기) | 대화 모델 지우기로<br>2.5GB 확보 |
 
 ### 자유 대화
 
 | 음성 통화 | 힌트 | 문자 모드 | 한국어로 도움받기 |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/04_chat_voice.png" width="200"> | <img src="docs/screenshots/05_chat_hint.png" width="200"> | <img src="docs/screenshots/06_chat_text.png" width="200"> | <img src="docs/screenshots/07_korean_assist.png" width="200"> |
-| 마이크를 누르고 영어로 말하기 | 막힐 때 예시 답변 | 표현 칩과 함께 문자로 | 한국어 → 영어 문장 → 따라 말하기 |
+| <img src="docs/screenshots/04_chat_voice.png" width="180"> | <img src="docs/screenshots/05_chat_hint.png" width="180"> | <img src="docs/screenshots/06_chat_text.png" width="180"> | <img src="docs/screenshots/07_korean_assist.png" width="180"> |
+| 마이크를 누르고<br>영어로 말하기 | 막힐 때<br>예시 답변 | 표현 칩과 함께<br>문자로 | 한국어 → 영어 문장<br>→ 따라 말하기 |
 
 ### 리포트 · 튜토리얼
 
-| 리포트 | 교정 · 도움받은 표현 | 튜토리얼 레벨 | 단원 목록 |
+| 리포트 | 교정 ·<br>도움받은 표현 | 튜토리얼 레벨 | 단원 목록 |
 |:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/08_report_top.png" width="200"> | <img src="docs/screenshots/09_report_corrections.png" width="200"> | <img src="docs/screenshots/10_tutorial_levels.png" width="200"> | <img src="docs/screenshots/11_tutorial_units.png" width="200"> |
-| 기억한 내용과 말하기 통계 | 더 자연스러운 표현 | 3레벨 · 레벨마다 8단원 | 상황별 6문장 |
+| <img src="docs/screenshots/08_report_top.png" width="180"> | <img src="docs/screenshots/09_report_corrections.png" width="180"> | <img src="docs/screenshots/10_tutorial_levels.png" width="180"> | <img src="docs/screenshots/11_tutorial_units.png" width="180"> |
+| 기억한 내용과<br>말하기 통계 | 더 자연스러운<br>표현 | 3레벨 ·<br>레벨마다 8단원 | 상황별 6문장 |
 
-| 문장 연습 | 홈 화면 위젯 | 기술 검증(개발자용) |
+| 문장 연습 | 홈 화면 위젯 | 기술 검증<br>(개발자용) |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/12_tutorial_practice.png" width="200"> | <img src="docs/screenshots/14_widget.png" width="200"> | <img src="docs/screenshots/15_dev_bench.png" width="200"> |
-| 시범 듣기 · 발음 팁 · 녹음 | 오늘의 한 문장 | 전체 측정 실행 · 로그 TXT 저장 |
+| <img src="docs/screenshots/12_tutorial_practice.png" width="180"> | <img src="docs/screenshots/14_widget.png" width="180"> | <img src="docs/screenshots/15_dev_bench.png" width="180"> |
+| 시범 듣기 ·<br>발음 팁 · 녹음 | 오늘의 한 문장 | 전체 측정 실행 ·<br>로그 TXT 저장 |
 
 ## 3. 최소 사양
 
